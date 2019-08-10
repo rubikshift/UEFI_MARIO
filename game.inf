@@ -1,0 +1,41 @@
+## @file
+# template
+##
+
+[Defines]
+  INF_VERSION                    = 1.25
+  BASE_NAME                      = game
+  FILE_GUID                      = 2f02a8d0-0648-44e0-a2da-e4b060329e84
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+#
+# The following information is for reference only and not required by the build tools.
+#
+#  VALID_ARCHITECTURES           = IA32 X64
+
+[Sources]
+  game.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  
+[LibraryClasses]
+  UefiRuntimeServicesTableLib
+  UefiBootServicesTableLib
+  UefiApplicationEntryPoint
+  MemoryAllocationLib
+  UefiLib
+  
+[Guids] # global guids c names that are used by module
+
+[Ppis]
+
+[Protocols] # gloabl protocol C names that are used by module
+  gEfiGraphicsOutputProtocolGuid
+  gEfiSimpleFileSystemProtocolGuid
+  gEfiSimpleTextOutProtocolGuid
+  
+[FeaturePcd]
+
+[Pcd]
